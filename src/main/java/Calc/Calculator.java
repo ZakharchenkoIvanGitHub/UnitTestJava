@@ -5,24 +5,17 @@ public class Calculator {
         int result;
 
         switch (operator) {
-            case '+':
-                result = firstOperand + secondOperand;
-                break;
-            case '-':
-                result = firstOperand - secondOperand;
-                break;
-            case '*':
-                result = firstOperand * secondOperand;
-                break;
-            case '/':
+            case '+' -> result = firstOperand + secondOperand;
+            case '-' -> result = firstOperand - secondOperand;
+            case '*' -> result = firstOperand * secondOperand;
+            case '/' -> {
                 if (secondOperand != 0) {
                     result = firstOperand / secondOperand;
-                    break;
                 } else {
                     throw new ArithmeticException("Division by zero is not possible");
                 }
-            default:
-                throw new IllegalStateException("Unexpected value operator: " + operator);
+            }
+            default -> throw new IllegalStateException("Unexpected value operator: " + operator);
         }
         return result;
     }
