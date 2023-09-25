@@ -10,10 +10,10 @@ public class UserRepository {
     List<User> data = new ArrayList<>();
 
     public void addUser(User user) {
-        if (user.isAuthenticate) {
+        if (!findByName(user.name)) {
             data.add(user);
         }
-
+        else throw new RuntimeException("Пользователь с таким именем существует");
     }
 
     public boolean findByName(String username) {
@@ -23,6 +23,15 @@ public class UserRepository {
             }
         }
         return false;
+    }
+
+    public void logout() {
+        for (User user : data) {
+            if (!user.isAdmin && user.isAuthenticate) {
+                user.isAuthenticate = false;
+            }
+        }
+
     }
 
 }
