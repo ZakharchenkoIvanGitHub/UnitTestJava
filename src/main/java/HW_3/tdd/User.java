@@ -18,7 +18,7 @@ public class User {
 
     //3.6.
     public boolean authenticate(String name, String password) {
-        if (Objects.equals(this.name, name) && Objects.equals(this.password, password)){
+        if (Objects.equals(this.name, name) && Objects.equals(this.password, password)) {
             this.isAuthenticate = true;
             return true;
         }

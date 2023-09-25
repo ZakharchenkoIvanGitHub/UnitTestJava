@@ -12,8 +12,7 @@ public class UserRepository {
     public void addUser(User user) {
         if (!findByName(user.name)) {
             data.add(user);
-        }
-        else throw new RuntimeException("Пользователь с таким именем существует");
+        } else throw new RuntimeException("Пользователь с таким именем существует");
     }
 
     public boolean findByName(String username) {

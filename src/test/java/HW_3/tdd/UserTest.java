@@ -25,7 +25,8 @@ class UserTest {
         assertFalse(user1.authenticate("Ivanov", "123456"));
         assertFalse(user1.isAuthenticate);
 
-}
+    }
+
     @Test
     void test_negative_authenticate_invalid_password() {
         assertFalse(user1.authenticate("Ivan", "123457"));

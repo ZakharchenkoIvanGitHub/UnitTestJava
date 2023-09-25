@@ -43,7 +43,7 @@ class UserRepositoryTest {
     }
 
     @Test
-    void test_logout(){
+    void test_logout() {
         repository.addUser(user1);
         repository.addUser(user2);
         repository.addUser(user4);
@@ -57,7 +57,6 @@ class UserRepositoryTest {
 
 
     }
-
 
 
 }

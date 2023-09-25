@@ -12,11 +12,8 @@ public class MainHW {
     }
 
     public boolean numberInInterval(int n) {
-        return  n>=25 && n<=100;
+        return n >= 25 && n <= 100;
     }
-
-
-
 
 
     // HW 3.1. Нужно покрыть тестами метод на 100%
